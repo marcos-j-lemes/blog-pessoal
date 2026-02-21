@@ -1,0 +1,154 @@
+/* ===== Estilização do conteúdo do artigo (post-content) ===== */
+
+/* Container principal do artigo */
+.post-content {
+    max-width: 800px;                /* Largura ideal para leitura (45–75 caracteres por linha) */
+    margin: 0 auto 40px;             /* Centraliza e dá espaço embaixo */
+    padding: 0 20px;
+}
+
+/* Título principal */
+.post-content h1 {
+    font-size: clamp(2rem, 5vw, 2.8rem);   /* Fluido e responsivo */
+    line-height: 1.2;
+    margin: 0 0 0.6em;
+    font-weight: 700;
+    color: #202122;
+    border-bottom: 2px solid #a2a9b1;      /* Toque Wikipedia */
+    padding-bottom: 0.4em;
+}
+
+/* Subtítulos */
+.post-content h2 {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+    margin: 2em 0 0.8em;
+    font-weight: 600;
+    color: #202122;
+    border-bottom: 1px solid #eaecf0;
+    padding-bottom: 0.3em;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    margin: 1.8em 0 0.6em;
+    font-weight: 600;
+    color: #202122;
+}
+
+/* Parágrafos */
+.post-content p {
+    font-size: 1.05rem;              /* 16–17px na maioria das telas */
+    line-height: 1.65;               /* Excelente para leitura longa */
+    margin: 0 0 1.4em;
+    hyphens: auto;                   /* Hifenização automática em pt-br (melhora fluxo) */
+}
+
+/* Listas */
+.post-content ul,
+.post-content ol {
+    margin: 1em 0 1.4em 1.8em;
+    padding-left: 0.8em;
+}
+
+.post-content li {
+    margin-bottom: 0.6em;
+}
+
+/* Links dentro do artigo */
+.post-content a {
+    color: #0645ad;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(6, 69, 173, 0.3);  /* Sutil sublinhado colorido */
+    transition: border-color 0.2s ease;
+}
+
+.post-content a:hover,
+.post-content a:focus {
+    border-bottom-color: #0645ad;
+    text-decoration: none;
+}
+
+/* Código inline e blocos de código */
+.post-content code {
+    font-family: "Consolas", "Monaco", "Courier New", monospace;
+    background: #f8f9fa;
+    color: #d63384;                  /* Tom rosado clássico para código */
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+    font-size: 0.95em;
+}
+
+.post-content pre {
+    background: #f8f9fa;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    padding: 1.2em;
+    overflow-x: auto;
+    margin: 1.6em 0;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.post-content pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    color: #202122;
+}
+
+/* Meta (data, tempo de leitura) */
+.post-content .meta {
+    font-size: 0.9rem;
+    color: #54595d;
+    margin-bottom: 2em;
+    font-style: italic;
+}
+
+/* Imagens no artigo (figure + figcaption) */
+.post-content figure {
+    margin: 2em 0;
+    text-align: center;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);  /* Sombra suave moderna */
+}
+
+.post-content figcaption {
+    margin-top: 0.8em;
+    font-size: 0.9rem;
+    color: #54595d;
+    font-style: italic;
+}
+
+/* Blockquote (citações ou destaques) */
+.post-content blockquote {
+    margin: 2em 0;
+    padding: 0.1em 1.5em;
+    border-left: 4px solid #a2a9b1;
+    background: #f8f9fa;
+    color: #404244;
+    font-style: italic;
+}
+
+/* Responsividade extra para telas menores */
+@media (max-width: 768px) {
+    .post-content {
+        padding: 0 15px;
+    }
+    
+    .post-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .post-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .post-content p {
+        font-size: 1.02rem;
+    }
+}

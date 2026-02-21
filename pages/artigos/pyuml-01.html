@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Por que Python é usado em Machine Learning | DeepWiki</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/artigo.css">
+</head>
+
+<style>
+
+    
+</style>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../../index.html">DeepWiki</a>
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul>
+                    <li><a href="../../index.html">Início</a></li>
+                    <!-- <li><a href="sobre.html">Sobre</a></li> -->
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="../artigos.html">Artigos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="profile">
+            <img class="avatar" src="https://via.placeholder.com/80" alt="Thumbnail" />
+        </aside>
+
+        <article class="post-content">
+            <header class="post-header">
+                <h1>Por que Python é a Linguagem Mais Usada em Machine Learning?</h1>
+                <p class="meta"><time datetime="2026-02-20">20 de fevereiro de 2026</time> · Leitura: 6 min</p>
+            </header>
+
+            <p>Se você está começando ou já trabalha com <strong>Machine Learning</strong> (ML), provavelmente já percebeu que quase todos os projetos, tutoriais, papers e vagas de emprego mencionam <strong>Python</strong>. Mas por que exatamente essa linguagem domina o ecossistema de ML e Inteligência Artificial em 2026?</p>
+
+            <p>Neste artigo vamos entender os principais motivos que fazem do Python a escolha quase unânime entre cientistas de dados, engenheiros de ML e pesquisadores.</p>
+
+            <h2>1. Sintaxe simples e legível (quase como pseudocódigo)</h2>
+
+            <p>A sintaxe do Python é limpa, intuitiva e muito próxima da linguagem natural. Isso reduz drasticamente o tempo gasto escrevendo e, principalmente, entendendo código — algo essencial em ML, onde passamos muito tempo iterando e experimentando.</p>
+
+            <p>Comparação rápida de um trecho simples em Python vs. outra linguagem:</p>
+
+<pre><code># Python - carregar dados e treinar um modelo simples
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+
+df = pd.read_csv("dados.csv")
+X = df.drop("target", axis=1)
+y = df["target"]
+
+modelo = RandomForestClassifier(n_estimators=100)
+modelo.fit(X, y)
+</code></pre>
+
+            <p>Em linguagens mais verbosas, esse mesmo fluxo exigiria muito mais linhas e caracteres. Menos código = menos erros + mais experimentação rápida.</p>
+
+            <h2>2. Ecossistema de bibliotecas incomparável</h2>
+
+            <p>O verdadeiro "superpoder" do Python em ML está nas bibliotecas maduras, poderosas e bem mantidas. As principais ferramentas do mercado são nativas ou fortemente otimizadas para Python:</p>
+
+            <ul>
+                <li><strong>NumPy</strong> e <strong>SciPy</strong> — álgebra linear e computação científica</li>
+                <li><strong>Pandas</strong> — manipulação e análise de dados (o Excel turbinado)</li>
+                <li><strong>Scikit-learn</strong> — algoritmos clássicos de ML prontos para uso</li>
+                <li><strong>TensorFlow</strong> / <strong>Keras</strong> — deep learning em produção (Google)</li>
+                <li><strong>PyTorch</strong> — pesquisa e prototipagem rápida (Meta AI)</li>
+                <li><strong>Hugging Face Transformers</strong> — modelos de linguagem, visão e multimodais pré-treinados</li>
+                <li><strong>Matplotlib</strong> / <strong>Seaborn</strong> / <strong>Plotly</strong> — visualização</li>
+            </ul>
+
+            <p>Quase todos os avanços recentes em IA (LLMs, visão computacional, reinforcement learning, etc.) têm sua implementação principal ou mais usada em Python.</p>
+
+            <h2>3. Comunidade gigante e suporte acadêmico/indústria</h2>
+
+            <p>Em 2025/2026, relatórios como o "State of Python" mostram que cerca de 41% dos desenvolvedores Python utilizam a linguagem especificamente para Machine Learning. A comunidade é enorme: fóruns, Stack Overflow, GitHub, papers, cursos (Coursera, Fast.ai, DeepLearning.AI), conferências (NeurIPS, ICML, PyCon).</p>
+
+            <p>Quando você tem um erro ou quer implementar algo novo, quase sempre já existe um notebook, tutorial ou issue resolvido em Python.</p>
+
+            <h2>4. Prototipagem rápida → Produção viável</h2>
+
+            <p>Python permite ir do experimento em Jupyter Notebook até pipelines de produção (com FastAPI, Flask, MLflow, Kubeflow, Airflow, etc.) sem precisar trocar de linguagem na maioria dos casos. Ferramentas modernas de MLOps e deployment (como BentoML, Seldon, Ray Serve) são centradas em Python.</p>
+
+            <p>Embora Python não seja a linguagem mais rápida em tempo de execução, as partes críticas (treinamento pesado) são aceleradas por C/C++, CUDA e hardware (GPU/TPU) através das bibliotecas — você não sente a lentidão na prática.</p>
+
+            <h2>5. Demanda absurda no mercado de trabalho</h2>
+
+            <p>Em 2026, a grande maioria das vagas de Cientista de Dados, Engenheiro de Machine Learning, AI Engineer e até Data Engineer exigem Python como requisito principal (muitas vezes mais do que SQL ou outras linguagens). Quem domina Python + as bibliotecas principais está em posição privilegiada no mercado.</p>
+
+            <h2>Conclusão</h2>
+
+            <p>Python não é perfeito (tem GIL, pode ser mais lento em loops puros, etc.), mas o conjunto de vantagens — simplicidade, bibliotecas poderosas, comunidade, flexibilidade do protótipo à produção e dominância no mercado — faz com que ele continue sendo, de longe, a melhor escolha para Machine Learning em 2026.</p>
+
+            <p>Se você está começando em ML agora, invista seu tempo em Python. O retorno é altíssimo.</p>
+
+            <p><em>Quer começar? Recomendo estudar: Pandas → Scikit-learn → PyTorch ou TensorFlow/Keras → Hugging Face.</em></p>
+        </article>
+
+        <section id="about" class="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">Sobre este blog</h2>
+            <p>Este é meu blog pessoal para documentar estudos e projetos, com foco em Machine Learning. Publico notas, tutoriais, experimentos, trechos de código e recursos úteis.</p>
+            <p>Temas: aprendizado supervisionado & não supervisionado, redes neurais, pré-processamento, avaliação e deployment.</p>
+            <ul class="about-links">
+                <li><a href="ml.html">Projetos & Tutoriais de ML</a></li>
+                <li><a href="contato.html">Contato / Colaboração</a></li>
+                <li><a href="sobre.html">Sobre o Autor</a></li>
+            </ul>
+        </section>
+
+        <section class="more-articles" aria-labelledby="more-heading">
+            <h2 id="more-heading">Mais Artigos e Tópicos</h2>
+
+            <div class="more-grid">
+                <div class="article-list">
+                    <ul class="posts">
+                        <li>
+                            <article aria-labelledby="post-1-title">
+                                <h3 id="post-1-title"><a href="post-supervised.html">Introdução ao Aprendizado Supervisionado</a></h3>
+                                <p>Guia prático sobre conjuntos de dados, seleção de modelos e métricas de avaliação para tarefas supervisionadas.</p>
+                                <p class="meta"><time datetime="2025-11-10">10 Nov 2025</time> · <a href="post-supervised.html">Ler mais</a></p>
+                            </article>
+                        </li>
+                        <!-- outros posts podem ser adicionados aqui -->
+                    </ul>
+
+                    <p class="view-all"><a href="../artigos.html" aria-label="Ver todos os artigos">Ver todos os artigos</a></p>
+                </div>
+
+                <aside class="topics" aria-labelledby="topics-heading">
+                    <h3 id="topics-heading">Tópicos</h3>
+                    <ul class="topic-list">
+                        <li><a href="ml.html">Aprendizado de Máquina</a></li>
+                        <li><a href="python.html">Python</a></li>
+                        <li><a href="data.html">Engenharia de Dados</a></li>
+                        <!-- <li><a href="dl.html">Deep Learning</a></li>
+                        <li><a href="devops.html">MLOps</a></li> -->
+                    </ul>
+
+                    <h4>Assuntos populares</h4>
+                    <div class="tags">
+                        <a href="tag/feature-engineering.html">feature-engineering</a>
+                        <a href="tag/nn.html">neural-networks</a>
+                        <a href="tag/evaluation.html">evaluation</a>
+                        <a href="tag/deployment.html">deployment</a>
+                    </div>
+
+                    <p class="collab"><a href="contato.html">Contato / Colaboração</a></p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <nav class="footer-nav" aria-label="Rodapé">
+                <h4>Artigos</h4>
+                <ul>
+                    <li><a href="../artigos.html">Ver todos os artigos</a></li>
+                    <li><a href="python.html">Python</a></li>
+                </ul>
+            </nav>
+
+            <div class="legal">
+                <p>© 2025 Meu Blog de ML. Todos os direitos reservados.</p>
+                <p class="social">
+                    <a href="https://github.com/yourusername/my-ml-blog" target="_blank" rel="noopener">GitHub</a>
+                    <a href="#" aria-hidden="true">LinkedIn</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
