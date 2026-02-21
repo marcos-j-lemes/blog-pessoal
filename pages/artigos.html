@@ -3,165 +3,154 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Meu Blog de ML</title>
+    <title>Artigos — DeepWiki</title>
     <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/artigo.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="../index.html">DeepWiki</a>
-            <nav class="main-nav" aria-label="Menu principal">
-                <ul>
-                    <li><a href="../index.html">Início</a></li>
-                    <!-- <li><a href="sobre.html">Sobre</a></li> -->
-                    <li><a href="colab-conta.html">Contato</a></li>
-                    <li><a href="artigos.html">Artigos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container">
-        <aside class="profile">
-            <img class="avatar" src="https://via.placeholder.com/80" alt="Thumbnail do autor" />
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="../index.html">DeepWiki</a>
+        <nav class="main-nav" aria-label="Menu principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="artigos.html" class="active">Artigos</a></li>
+                <li><a href="colab-conta.html">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="article-layout">
+
+        <!-- Sumário lateral -->
+        <aside class="article-toc" aria-label="Sumário">
+            <h4>Neste artigo</h4>
+            <ol class="toc-list">
+                <li><a href="#sintaxe">Sintaxe simples e legível</a></li>
+                <li><a href="#ecossistema">Ecossistema de bibliotecas</a></li>
+                <li><a href="#comunidade">Comunidade e suporte</a></li>
+                <li><a href="#prototipagem">Prototipagem → Produção</a></li>
+                <li><a href="#mercado">Demanda no mercado</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ol>
         </aside>
 
-        <section class="hero">
-            <h1>Nessa página você encontrará todos os artigos</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
-        </section>
+        <!-- Conteúdo do artigo -->
+        <article class="post-content">
+            <header class="post-header">
+                <h1>Por que Python é a linguagem mais usada em Machine Learning?</h1>
+                <p class="meta"><time datetime="2026-02-20">20 de fevereiro de 2026</time> · 6 min de leitura · <a href="../artigos.html">Artigos</a></p>
+            </header>
 
-        <section id="articles" class="all-articles" aria-labelledby="articles-heading">
-            <h2 id="articles-heading">Todos os Artigos</h2>
-            <p class="lead">Aqui estão todos os artigos publicados no blog. Clique no título para ler o post completo.</p>
+            <p>Se você está começando ou já trabalha com <strong>Machine Learning</strong> (ML), provavelmente já percebeu que quase todos os projetos, tutoriais, papers e vagas de emprego mencionam <strong>Python</strong>. Mas por que exatamente essa linguagem domina o ecossistema de ML e Inteligência Artificial em 2026?</p>
 
-            <ul class="articles-grid">
-                <li>
-                    <article aria-labelledby="post-1-title">
-                        <h3 id="post-1-title"><a href="./artigos/pyuml-01.html">Por que Python é a Linguagem Mais Usada em machine Learning</a></h3>
-                        <p>Se você está começando ou já trabalha com Machine Learning (ML), provavelmente já percebeu que quase todos os projetos...</p>
-                        <p class="meta"><time datetime="2026-02-20">20 Fev 2026</time> · <a href="./artigos/pyuml-01.html">Ler</a></p>
-                    </article>
-                </li>
-<!-- 
-                <li>
-                    <article aria-labelledby="post-2-title">
-                        <h3 id="post-2-title"><a href="post-feature-engineering.html">Feature Engineering: Preparando Dados</a></h3>
-                        <p>Técnicas de transformação, seleção e construção de features para melhorar modelos.</p>
-                        <p class="meta"><time datetime="2025-08-02">02 Ago 2025</time> · <a href="post-feature-engineering.html">Ler</a></p>
-                    </article>
-                </li>
+            <p>Neste artigo vamos entender os principais motivos que fazem do Python a escolha quase unânime entre cientistas de dados, engenheiros de ML e pesquisadores.</p>
 
-                <li>
-                    <article aria-labelledby="post-3-title">
-                        <h3 id="post-3-title"><a href="post-neural-networks.html">Redes Neurais: Conceitos Básicos</a></h3>
-                        <p>Visão geral de arquiteturas, funções de ativação e treinamento básico de redes.</p>
-                        <p class="meta"><time datetime="2025-06-15">15 Jun 2025</time> · <a href="post-neural-networks.html">Ler</a></p>
-                    </article>
-                </li>
+            <h2 id="sintaxe">1. Sintaxe simples e legível (quase como pseudocódigo)</h2>
 
-                <li>
-                    <article aria-labelledby="post-4-title">
-                        <h3 id="post-4-title"><a href="post-evaluation.html">Métricas e Avaliação de Modelos</a></h3>
-                        <p>Como escolher e interpretar métricas para classificação, regressão e ranking.</p>
-                        <p class="meta"><time datetime="2025-04-20">20 Abr 2025</time> · <a href="post-evaluation.html">Ler</a></p>
-                    </article>
-                </li> 
+            <p>A sintaxe do Python é limpa, intuitiva e muito próxima da linguagem natural. Isso reduz drasticamente o tempo gasto escrevendo e, principalmente, entendendo código — algo essencial em ML, onde passamos muito tempo iterando e experimentando.</p>
 
-                <li>
-                    <article aria-labelledby="post-5-title">
-                        <h3 id="post-5-title"><a href="post-deployment.html">Deployment de Modelos em Produção</a></h3>
-                        <p>Padrões e ferramentas para colocar modelos em produção com segurança e escala.</p>
-                        <p class="meta"><time datetime="2025-02-11">11 Fev 2025</time> · <a href="post-deployment.html">Ler</a></p>
-                    </article>
-                </li> 
+<pre><code># Carregar dados e treinar um modelo simples
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
 
-                <li>
-                    <article aria-labelledby="post-6-title">
-                        <h3 id="post-6-title"><a href="post-python-tips.html">Dicas de Python para Data Science</a></h3>
-                        <p>Atalhos, bibliotecas essenciais e práticas recomendadas para produtividade.</p>
-                        <p class="meta"><time datetime="2024-12-01">01 Dez 2024</time> · <a href="post-python-tips.html">Ler</a></p>
-                    </article>
-                </li> -->
+df = pd.read_csv("dados.csv")
+X = df.drop("target", axis=1)
+y = df["target"]
+
+modelo = RandomForestClassifier(n_estimators=100)
+modelo.fit(X, y)
+</code></pre>
+
+            <p>Em linguagens mais verbosas, esse mesmo fluxo exigiria muito mais linhas. Menos código = menos erros + mais experimentação rápida.</p>
+
+            <h2 id="ecossistema">2. Ecossistema de bibliotecas incomparável</h2>
+
+            <p>O verdadeiro "superpoder" do Python em ML está nas bibliotecas maduras, poderosas e bem mantidas. As principais ferramentas do mercado são nativas ou fortemente otimizadas para Python:</p>
+
+            <ul>
+                <li><strong>NumPy</strong> e <strong>SciPy</strong> — álgebra linear e computação científica</li>
+                <li><strong>Pandas</strong> — manipulação e análise de dados</li>
+                <li><strong>Scikit-learn</strong> — algoritmos clássicos de ML prontos para uso</li>
+                <li><strong>TensorFlow / Keras</strong> — deep learning em produção (Google)</li>
+                <li><strong>PyTorch</strong> — pesquisa e prototipagem rápida (Meta AI)</li>
+                <li><strong>Hugging Face Transformers</strong> — modelos de linguagem e visão pré-treinados</li>
+                <li><strong>Matplotlib / Seaborn / Plotly</strong> — visualização</li>
             </ul>
 
-            <p class="view-all"><a href="articles.html" aria-label="Ver todos os artigos">Ver página completa de artigos</a></p>
-        </section>
+            <p>Quase todos os avanços recentes em IA têm sua implementação principal em Python. Quando um paper novo sai, o repositório oficial é sempre em Python.</p>
 
+            <h2 id="comunidade">3. Comunidade gigante e suporte acadêmico/industrial</h2>
 
+            <p>Em 2025/2026, cerca de 41% dos desenvolvedores Python utilizam a linguagem especificamente para Machine Learning. A comunidade é enorme: Stack Overflow, GitHub, cursos (Fast.ai, DeepLearning.AI), conferências (NeurIPS, ICML, PyCon).</p>
 
-        <section id="about" class="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">Sobre este blog</h2>
-            <p>Este é meu blog pessoal para documentar estudos e projetos, com foco em Machine Learning. Publico notas, tutoriais, experimentos, trechos de código e recursos úteis.</p>
-            <p>Temas: aprendizado supervisionado &amp; não supervisionado, redes neurais, pré-processamento, avaliação e deployment.</p>
-            <ul class="about-links">
-                <li><a href="ml.html">Projetos &amp; Tutoriais de ML</a></li>
-                <li><a href="colab-conta.html">Contato / Colaboração</a></li>
-                <li><a href="sobre.html">Sobre o Autor</a></li>
+            <p>Quando você tem um erro ou quer implementar algo novo, quase sempre já existe um notebook, tutorial ou issue resolvido em Python. Isso reduz o tempo de debugging drasticamente.</p>
+
+            <h2 id="prototipagem">4. Prototipagem rápida → Produção viável</h2>
+
+            <p>Python permite ir do experimento em Jupyter Notebook até pipelines de produção (com FastAPI, MLflow, Airflow, BentoML) sem precisar trocar de linguagem na maioria dos casos.</p>
+
+            <p>Embora Python não seja a linguagem mais rápida em tempo de execução, as partes críticas (treinamento pesado) são aceleradas por C/C++, CUDA e hardware (GPU/TPU) através das bibliotecas — na prática, você não sente a lentidão.</p>
+
+            <h2 id="mercado">5. Demanda absurda no mercado de trabalho</h2>
+
+            <p>A grande maioria das vagas de Cientista de Dados, Engenheiro de ML e AI Engineer exige Python como requisito principal. Quem domina Python + as bibliotecas principais está em posição privilegiada no mercado de 2026.</p>
+
+            <h2 id="conclusao">Conclusão</h2>
+
+            <p>Python não é perfeito (tem GIL, pode ser mais lento em loops puros), mas o conjunto de vantagens — simplicidade, bibliotecas poderosas, comunidade, flexibilidade do protótipo à produção e dominância no mercado — faz com que continue sendo, de longe, a melhor escolha para ML.</p>
+
+            <p>Se você está começando agora, invista seu tempo em Python. O retorno é altíssimo.</p>
+
+            <blockquote>
+                <p>Sequência recomendada para quem está começando: Pandas → Scikit-learn → PyTorch ou TensorFlow/Keras → Hugging Face.</p>
+            </blockquote>
+        </article>
+
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <nav class="footer-nav">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="artigos.html">Todos os artigos</a></li>
+                <li><a href="colab-conta.html">Contato</a></li>
             </ul>
-        </section>
-
-        <section class="more-articles" aria-labelledby="more-heading">
-            <h2 id="more-heading">Mais Artigos e Tópicos</h2>
-
-            <div class="more-grid">
-                <div class="article-list">
-                    <ul class="posts">
-                        <li>
-                            <article aria-labelledby="post-1-title">
-                                <h3 id="post-1-title"><a href="post-supervised.html">Introdução ao Aprendizado Supervisionado</a></h3>
-                                <p>Guia prático sobre conjuntos de dados, seleção de modelos e métricas de avaliação para tarefas supervisionadas.</p>
-                                <p class="meta"><time datetime="2025-11-10">10 Nov 2025</time> · <a href="post-supervised.html">Ler mais</a></p>
-                            </article>
-                        </li>
-                        <!-- outros posts podem ser adicionados aqui -->
-                    </ul>
-
-                    <p class="view-all"><a href="articles.html" aria-label="Ver todos os artigos">Ver todos os artigos</a></p>
-                </div>
-
-                <aside class="topics" aria-labelledby="topics-heading">
-                    <h3 id="topics-heading">Tópicos</h3>
-                    <ul class="topic-list">
-                        <li><a href="ml.html">Aprendizado de Máquina</a></li>
-                        <li><a href="python.html">Python</a></li>
-                        <li><a href="data.html">Engenharia de Dados</a></li>
-                        <!-- <li><a href="dl.html">Deep Learning</a></li>
-                        <li><a href="devops.html">MLOps</a></li> -->
-                    </ul>
-
-                    <h4>Assuntos populares</h4>
-                    <div class="tags">
-                        <a href="tag/feature-engineering.html">feature-engineering</a>
-                        <a href="tag/nn.html">neural-networks</a>
-                        <a href="tag/evaluation.html">evaluation</a>
-                        <a href="tag/deployment.html">deployment</a>
-                    </div>
-
-                    <p class="collab"><a href="colab-conta.html">Contato / Colaboração</a></p>
-                </aside>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <nav class="footer-nav" aria-label="Rodapé">
-                <h4>Artigos</h4>
-                <ul>
-                    <li><a href="artigos.html">Ver todos os artigos</a></li>
-                    <li><a href="python.html">Python</a></li>
-                </ul>
-            </nav>
-
-            <div class="legal">
-                <p>&copy; 2025 Meu Blog de ML. Todos os direitos reservados.</p>
-                <p class="social">
-                    <a href="https://github.com/yourusername/my-ml-blog" target="_blank" rel="noopener">GitHub</a>
-                    <a href="#" aria-hidden="true">LinkedIn</a>
-                </p>
-            </div>
+        </nav>
+        <div class="legal">
+            <p>&copy; 2026 DeepWiki. Todos os direitos reservados.</p>
+            <p class="social">
+                <a href="https://github.com/marcos-j-ferreira" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/marcos-j%C3%BAnior-2652b4316/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://x.com/Marcos84042822" target="_blank" rel="noopener">X/Twitter</a>
+            </p>
         </div>
-    </footer>
+    </div>
+</footer>
+
+<script>
+// Highlight ativo no sumário ao scrollar
+const headings = document.querySelectorAll('.post-content h2[id]');
+const tocLinks = document.querySelectorAll('.toc-list a');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            tocLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+        }
+    });
+}, { rootMargin: '-20% 0px -70% 0px' });
+headings.forEach(h => observer.observe(h));
+</script>
+
 </body>
 </html>
